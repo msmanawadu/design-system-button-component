@@ -1,99 +1,128 @@
+@use 'sass:color';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+// Colors
+$default: #e6e4e4;
+$default-outline: #858585;
+$primary: #0e2df9;
+$secondary: #646cff;
+$info: #00b4ff;
+$success: #00b300;
+$warning: #ffa600;
+$danger: #ff393c;
+
+* {
+	font-family: 'Merriweather', serif;
+}
+
 :root {
-	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
-
-	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
-
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-a {
-	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
-}
-a:hover {
-	color: #535bf2;
-}
-
 body {
+	background-color: #ffffff;
+	padding: 0;
 	margin: 0;
-	display: flex;
-	place-items: center;
-	min-width: 320px;
-	min-height: 100vh;
+	box-sizing: border-box;
 }
 
-$bg: #ff0ca6;
-
-h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
-	color: $bg;
-}
-
-#app {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
+.center {
 	text-align: center;
 }
 
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-	filter: drop-shadow(0 0 2em #f7df1eaa);
+h1 {
+	font-size: 42px;
+	color: #0c2f0c;
 }
 
-.card {
-	padding: 2em;
+h2 {
+	color: #194e19;
 }
 
-.read-the-docs {
-	color: #888;
+@mixin btn-theme($bg-color, $text-color) {
+	background-color: $bg-color;
+	border: 1px solid color.adjust($color: $bg-color, $lightness: -20%);
+	color: $text-color;
+	&:hover {
+		background-color: color.adjust($color: $bg-color, $lightness: -5%);
+	}
+	&:focus,
+	&:active {
+		box-shadow: 0 0 0 2px color.adjust($color: $bg-color, $lightness: 10%);
+		outline: none;
+	}
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
 }
 
-button {
-	border-radius: 8px;
-	border: 1px solid transparent;
-	padding: 0.6em 1.2em;
-	font-size: 1em;
+@mixin btn-outline-theme($color, $text-color) {
+	background-color: $text-color;
+	border: 1px solid $color;
+	color: $color;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color;
+		color: $text-color;
+	}
+	&:disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
+
+.btn {
+	padding: 12px 48px;
+	border-radius: 6px;
+	margin: 8px 32px;
+	font-size: 16px;
 	font-weight: 500;
-	font-family: inherit;
-	background-color: #1a1a1a;
+	display: inline-block;
 	cursor: pointer;
-	transition: border-color 0.25s;
-}
-button:hover {
-	border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
-}
+	@include btn-theme($default, #000000);
 
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
+	&.primary {
+		@include btn-theme($primary, #ffffff);
 	}
-	a:hover {
-		color: #747bff;
+	&.secondary {
+		@include btn-theme($secondary, #ffffff);
 	}
-	button {
-		background-color: #f9f9f9;
+	&.info {
+		@include btn-theme($info, #ffffff);
+	}
+	&.success {
+		@include btn-theme($success, #ffffff);
+	}
+	&.warning {
+		@include btn-theme($warning, #000000);
+	}
+	&.danger {
+		@include btn-theme($danger, #ffffff);
+	}
+	&.btn-outline {
+		@include btn-outline-theme($default-outline, #ffffff);
+	}
+	&.btn-primary-outline {
+		@include btn-outline-theme($primary, #ffffff);
+	}
+	&.btn-secondary-outline {
+		@include btn-outline-theme($secondary, #ffffff);
+	}
+	&.btn-info-outline {
+		@include btn-outline-theme($info, #ffffff);
+	}
+	&.btn-success-outline {
+		@include btn-outline-theme($success, #ffffff);
+	}
+	&.btn-warning-outline {
+		@include btn-outline-theme($warning, #ffffff);
+	}
+	&.btn-danger-outline {
+		@include btn-outline-theme($danger, #ffffff);
 	}
 }
