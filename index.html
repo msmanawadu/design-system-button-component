@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Button Component</title>
 	</head>
+
 	<body>
 		<header class="center">
 			<h1>Button Component</h1>
@@ -24,54 +25,48 @@
 			</section>
 
 			<section class="center">
-				<h2>Button Sizes</h2>
-
-				<button class="btn small">Small Button</button>
-				<button class="btn medium">Medium Button</button>
-				<button class="btn large">Large Button</button>
-			</section>
-
-			<section class="center">
-				<h2>Button with Icon</h2>
-
-				<button class="btn icon">
-					<span class="icon">⭐</span> Icon Button
-				</button>
-			</section>
-
-			<section class="center">
 				<h2>Outline Buttons</h2>
-				<button class="btn btn-outline">Default Outline</button>
-				<button class="btn btn-primary-outline">Primary Outline</button>
-				<button class="btn btn-secondary-outline">Secondary Outline</button>
-				<button class="btn btn-info-outline">Info Outline</button>
-				<button class="btn btn-success-outline">Success Outline</button>
-				<button class="btn btn-warning-outline">Warning Outline</button>
-				<button class="btn btn-danger-outline">Danger Outline</button>
-				<button class="btn btn-outline" disabled>Disabled Outline</button>
+				<button class="btn outline">Default Outline</button>
+				<button class="btn primary-outline">Primary Outline</button>
+				<button class="btn secondary-outline">Secondary Outline</button>
+				<button class="btn info-outline">Info Outline</button>
+				<button class="btn success-outline">Success Outline</button>
+				<button class="btn warning-outline">Warning Outline</button>
+				<button class="btn danger-outline">Danger Outline</button>
+				<button class="btn outline" disabled>Disabled Outline</button>
 			</section>
 
 			<section class="center">
-				<h2>Accessibility Features</h2>
-
-				<button class="btn" aria-label="Close" title="Close">Close</button>
+				<h2>Button Sizes</h2>
+				<button class="btn small">Small</button>
+				<button class="btn medium">Medium</button>
+				<button class="btn large">Large</button>
+				<br />
+				<button class="btn small">Small</button>
+				<button class="btn medium primary">Medium</button>
+				<button class="btn large primary-outline">Large</button>
 			</section>
 
 			<section class="center">
-				<h2>Button with Tooltip</h2>
-
-				<button class="btn tooltip" title="Tooltip text">Hover me</button>
+				<h2>Button with Icon at start</h2>
+				<button class="btn icon"><span class="icon">⭐</span> Icon</button>
 			</section>
 
 			<section class="center">
-				<h2>Button with Custom Styles</h2>
+				<h2>Button with Icon at end</h2>
+				<button class="btn icon">Icon <span class="icon">⭐</span></button>
+			</section>
 
-				<button class="btn custom-style">Custom Style Button</button>
+			<section class="center">
+				<h2>Icon Button</h2>
+				<button class="btn icon">
+					<span class="icon">⭐</span>
+				</button>
 			</section>
 		</main>
 
 		<footer class="center">
-			<p>Design System | Button Component</p>
+			<p>&copy; Design System | Button Component</p>
 		</footer>
 
 		<script type="module" src="/src/main.js"></script>
