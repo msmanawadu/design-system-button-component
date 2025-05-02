@@ -14,53 +14,135 @@
 		<main>
 			<section class="center">
 				<h2>Button Variants</h2>
-				<button class="btn">Default</button>
-				<button class="btn primary">Primary</button>
-				<button class="btn secondary">Secondary</button>
-				<button class="btn info">Info</button>
-				<button class="btn success">Success</button>
-				<button class="btn warning">Warning</button>
-				<button class="btn danger">Danger</button>
-				<button class="btn" disabled>Disabled</button>
+				<button class="btn" type="button">
+					<span class="text">Default</span>
+				</button>
+				<button class="btn primary" type="button">
+					<span class="text">Primary</span>
+				</button>
+				<button class="btn secondary" type="button">
+					<span class="text">Secondary</span>
+				</button>
+				<button class="btn info" type="button">
+					<span class="text">Info</span>
+				</button>
+				<button class="btn success" type="button">
+					<span class="text">Success</span>
+				</button>
+				<button class="btn warning" type="button">
+					<span class="text">Warning</span>
+				</button>
+				<button class="btn danger" type="button">
+					<span class="text">Danger</span>
+				</button>
+				<button class="btn" disabled type="button">
+					<span class="text">Disabled</span>
+				</button>
 			</section>
 
 			<section class="center">
 				<h2>Outline Buttons</h2>
-				<button class="btn outline">Default Outline</button>
-				<button class="btn primary-outline">Primary Outline</button>
-				<button class="btn secondary-outline">Secondary Outline</button>
-				<button class="btn info-outline">Info Outline</button>
-				<button class="btn success-outline">Success Outline</button>
-				<button class="btn warning-outline">Warning Outline</button>
-				<button class="btn danger-outline">Danger Outline</button>
-				<button class="btn outline" disabled>Disabled Outline</button>
+				<button class="btn outline" type="button">
+					<span class="text">Default Outline</span>
+				</button>
+				<button class="btn primary-outline" type="button">
+					<span class="text">Primary Outline</span>
+				</button>
+				<button class="btn secondary-outline" type="button">
+					<span class="text">Secondary Outline</span>
+				</button>
+				<button class="btn info-outline" type="button">
+					<span class="text">Info Outline</span>
+				</button>
+				<button class="btn success-outline" type="button">
+					<span class="text">Success Outline</span>
+				</button>
+				<button class="btn warning-outline" type="button">
+					<span class="text">Warning Outline</span>
+				</button>
+				<button class="btn danger-outline" type="button">
+					<span class="text">Danger Outline</span>
+				</button>
+				<button class="btn outline" disabled type="button">
+					<span class="text">Disabled Outline</span>
+				</button>
 			</section>
 
 			<section class="center">
 				<h2>Button Sizes</h2>
-				<button class="btn small">Small</button>
-				<button class="btn medium">Medium</button>
-				<button class="btn large">Large</button>
+				<button class="btn small" type="button">
+					<span class="text">Small</span>
+				</button>
+				<button class="btn medium" type="button">
+					<span class="text">Medium</span>
+				</button>
+				<button class="btn large" type="button">
+					<span class="text">Large</span>
+				</button>
 				<br />
-				<button class="btn small">Small</button>
-				<button class="btn medium primary">Medium</button>
-				<button class="btn large primary-outline">Large</button>
+				<button class="btn small" type="button">
+					<span class="text">Small</span>
+				</button>
+				<button class="btn medium primary" type="button">
+					<span class="text">Medium</span>
+				</button>
+				<button class="btn large primary-outline" type="button">
+					<span class="text">Large</span>
+				</button>
 			</section>
 
 			<section class="center">
-				<h2>Button with Icon at start</h2>
-				<button class="btn icon"><span class="icon">⭐</span> Icon</button>
+				<h2>Button with Icon at Start</h2>
+				<button class="btn" type="button">
+					<span class="icon start">🏠</span>
+					<span class="text"> Button </span>
+				</button>
+				<button class="btn primary" type="button">
+					<span class="icon start">🏠</span>
+					<span class="text"> Button </span>
+				</button>
+				<button class="btn primary-outline" type="button">
+					<span class="icon start">🏠</span>
+					<span class="text"> Button </span>
+				</button>
 			</section>
 
 			<section class="center">
-				<h2>Button with Icon at end</h2>
-				<button class="btn icon">Icon <span class="icon">⭐</span></button>
+				<h2>Button with Icon at End</h2>
+				<button class="btn" type="button">
+					<span class="text"> Button </span>
+					<span class="icon end">🏠</span>
+				</button>
+				<button class="btn primary" type="button">
+					<span class="text"> Button </span>
+					<span class="icon end">🏠</span>
+				</button>
+				<button class="btn primary-outline" type="button">
+					<span class="text"> Button </span>
+					<span class="icon end">🏠</span>
+				</button>
 			</section>
 
 			<section class="center">
 				<h2>Icon Button</h2>
-				<button class="btn icon">
-					<span class="icon">⭐</span>
+				<button class="btn plain" type="button">
+					<span class="icon">🏠</span>
+				</button>
+				<button class="btn plain primary" type="button">
+					<span class="icon">🏠</span>
+				</button>
+				<button class="btn plain primary-outline" type="button">
+					<span class="icon">🏠</span>
+				</button>
+				<br />
+				<button class="btn plain small" type="button">
+					<span class="small">🏠</span>
+				</button>
+				<button class="btn plain primary medium" type="button">
+					<span class="medium">🏠</span>
+				</button>
+				<button class="btn plain primary-outline large" type="button">
+					<span class="large">🏠</span>
 				</button>
 			</section>
 		</main>
@@ -69,6 +151,6 @@
 			<p>&copy; Design System | Button Component</p>
 		</footer>
 
-		<script type="module" src="/src/main.js"></script>
+		<script type="module" src="/src/js/main.js"></script>
 	</body>
 </html>

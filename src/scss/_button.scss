@@ -1,0 +1,79 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/* Button base/block class */
+.btn {
+	padding: $btn-padding-y $btn-padding-x;
+	border-radius: $btn-border-radius;
+	margin: $btn-margin-top-bottom $btn-margin-left-right;
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	display: inline-block;
+	position: relative;
+	white-space: nowrap;
+	text-decoration: none;
+	line-height: $btn-line-height;
+	cursor: pointer;
+	@include btn-theme($default, $btn-text-main);
+
+	&.primary {
+		@include btn-theme($primary);
+	}
+	&.secondary {
+		@include btn-theme($secondary);
+	}
+	&.info {
+		@include btn-theme($info);
+	}
+	&.success {
+		@include btn-theme($success);
+	}
+	&.warning {
+		@include btn-theme($warning, $btn-text-main);
+	}
+	&.danger {
+		@include btn-theme($danger);
+	}
+	&.outline {
+		@include btn-outline-theme($default-outline);
+	}
+	&.primary-outline {
+		@include btn-outline-theme($primary);
+	}
+	&.secondary-outline {
+		@include btn-outline-theme($secondary);
+	}
+	&.info-outline {
+		@include btn-outline-theme($info);
+	}
+	&.success-outline {
+		@include btn-outline-theme($success);
+	}
+	&.warning-outline {
+		@include btn-outline-theme($warning);
+	}
+	&.danger-outline {
+		@include btn-outline-theme($danger);
+	}
+	&.plain {
+		padding: $btn-plain-padding-y $btn-plain-padding-x;
+	}
+	&.small {
+		@include btn-size(small);
+	}
+	&.medium {
+		@include btn-size(medium);
+	}
+	&.large {
+		@include btn-size(large);
+	}
+	& .icon {
+		font-size: $btn-font-size;
+		&.start {
+			margin-right: $btn-icon-margin-right;
+		}
+		&.end {
+			margin-left: $btn-icon-margin-left;
+		}
+	}
+}

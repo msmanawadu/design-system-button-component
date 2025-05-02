@@ -1,0 +1,50 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+/* Mixins */
+@mixin btn-theme($bg-color, $text-color: $btn-text-auxiliary) {
+	background-color: $bg-color;
+	border: 1px solid color.adjust($color: $bg-color, $lightness: -20%);
+	color: $text-color;
+	&:hover {
+		background-color: color.adjust($color: $bg-color, $lightness: -5%);
+	}
+	&:focus,
+	&:active {
+		box-shadow: 0 0 0 2px color.adjust($color: $bg-color, $lightness: 10%);
+		outline: none;
+	}
+	&:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+}
+
+@mixin btn-outline-theme($outline-color, $text-color: $btn-text-auxiliary) {
+	background-color: $text-color;
+	border: 1px solid $outline-color;
+	color: $outline-color;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $outline-color;
+		color: $text-color;
+	}
+	&:disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
+
+@mixin btn-size($size) {
+	@if $size == small {
+		font-size: $btn-sm-font-size;
+		padding: calc($btn-padding-y - 0.5rem) calc($btn-padding-x - 1rem);
+	} @else if $size == medium {
+		font-size: $btn-md-font-size;
+		padding: calc($btn-padding-y - 0.2rem) calc($btn-padding-x - 0.2rem);
+	} @else if $size == large {
+		font-size: $btn-lg-font-size;
+		padding: calc($btn-padding-y + 0.5rem) calc($btn-padding-x + 1rem);
+	}
+}
