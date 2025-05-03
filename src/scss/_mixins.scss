@@ -7,11 +7,12 @@
 	border: 1px solid color.adjust($color: $bg-color, $lightness: -20%);
 	color: $text-color;
 	&:hover {
-		background-color: color.adjust($color: $bg-color, $lightness: -5%);
+		background-color: color.adjust($color: $bg-color, $lightness: -15%);
+		color: color.adjust($color: $text-color, $lightness: 10%);
 	}
 	&:focus,
 	&:active {
-		box-shadow: 0 0 0 2px color.adjust($color: $bg-color, $lightness: 10%);
+		box-shadow: 0 0 0 2px color.adjust($color: $bg-color, $lightness: 5%);
 		outline: none;
 	}
 	&:disabled {
@@ -29,6 +30,8 @@
 	&:focus {
 		background-color: $outline-color;
 		color: $text-color;
+		box-shadow: 0 0 0 1px color.adjust($color: $outline-color, $lightness: 10%);
+		outline: none;
 	}
 	&:disabled {
 		opacity: 0.5;
