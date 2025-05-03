@@ -1,8 +1,8 @@
 # design-system-button-component
 
-### Button Component of the Design System built using HTML and CSS
+## Button Component of the Design System built using HTML and CSS
 
-## How to run the project ? :rocket
+### How to run the project ? :rocket:
 
 _Make sure you have Node & NPM installed first_
 
